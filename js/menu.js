@@ -1,28 +1,3 @@
-// ;(function($) {
-//   $(function() {
-//     $('nav ul li > a:not(:only-child)').click(function(e) {
-//       $(this)
-//         .siblings('.nav-dropdown')
-//         .slideToggle()
-//       $('.nav-dropdown')
-//         .not($(this).siblings())
-//         .hide()
-//       e.stopPropagation()
-//     })
-//     $('html').click(function() {
-//       $('.nav-dropdown').hide()
-//     })
-//     // Toggle open and close nav styles on click
-//     $('#nav-toggle').click(function() {
-//       $('nav ul').slideToggle();
-//     });
-//     $('#nav-toggle').on('click', function() {
-//       this.classList.toggle('active')
-//     })
-//   })
-// })(jQuery)
-
-// Sub-menu
 var submenus = document.querySelectorAll("ul.sub-menu");
 if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
     var span = document.createElement('span');
@@ -39,16 +14,6 @@ if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
     submenus[i].parentNode.insertBefore(span, submenus[i]);
 }
 
-
-/*
-	<a class="anyclass" href="#" data-toggle-class="active, someotherclass" data-toggle-target=".menu, self">Menu</a>
-
-	data-toggle-class - classes to apply to targets
-	data-toggle-target - target's selectors to apply classes to
-
-	If there is no 'data-toggle-target' attribute (only 'data-toggle-class'), classes are applyed to trigger element. 
-	If classes are needed to be appled to targets including trigger element itself, use keywords 'this' or 'self'.
-*/
 (function() {
 
 	function toggleClasses(classes, obj)
