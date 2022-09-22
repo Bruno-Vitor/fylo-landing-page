@@ -7,7 +7,6 @@
 }
 
 :root {
-  // colors
   --blue: #202a3c;
   --light-blue: #1c2431;
   --medium-blue: #181f2a;
@@ -241,6 +240,11 @@ nav {
 			padding: 1rem 1rem;
 			color: #ffffff;
 			text-decoration: none;
+
+			&:hover {
+				color: var(--cyan-hover);
+				transition: all .3s;
+			}
 		}
 	}
 	
@@ -429,9 +433,14 @@ nav {
 			align-items: center;
 			font-size: 1rem;
 			font-family: var(--open-sans);
-			color: var(--cyan-hover);
+			color: var(--cyan);
 			border-bottom: 1px solid;
 			padding-bottom: .3rem;
+
+			&:hover {
+				color: var(--cyan-hover);
+				transition: all .3s;
+			}
 		}
 	}
 }
@@ -609,15 +618,24 @@ footer {
 	padding: 100px 0 0 0;
 
 	@media screen and (max-width: 767px) {
-		height:1000px;
 		flex-direction: column;
  		padding: 1rem;
+	}
+
+	#logo {
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 	}
 
 	.left2 {
 		display:flex;
 		justify-content:center;
 		align-items:center;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 
 		p {
 			width:300px;
@@ -635,6 +653,10 @@ footer {
 		align-items:flex-start;
 		flex-direction:column;
 		margin-top:75px;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 
 		div {
 			display:flex;
@@ -657,7 +679,7 @@ footer {
 		grid-template-rows:35px 35px 35px 35px;
 	
 		@media screen and (max-width: 767px) {
-			margin: 15px auto;
+			margin: 170px auto 0px auto;
 		}
 		
 		li {
@@ -700,12 +722,7 @@ footer {
 	}
 }
 
-
-
-
-
-
 .social i:hover{
-	color:hsl(176, 68%, 64%);
-	border:1px solid hsl(176, 68%, 64%);
+	color: var(--cyan-hover);
+	border:1px solid var(--cyan-hover);
 }
