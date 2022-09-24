@@ -458,7 +458,7 @@ nav {
 	flex-wrap: wrap;
 	width: 100%;
 	margin: 0 auto;
-	padding: 100px 0 100px 0;
+	padding: 100px 0 0 0;
 	position: relative;
 
 	@media screen and (max-width: 767px) {
@@ -613,15 +613,20 @@ nav {
 // footer
 footer {
 	display: grid;
-  grid-template-columns: 4fr 3fr 1fr 1fr 2fr;
+  grid-template-columns: 4fr 2fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   background-color: var(--dark-blue);
-  padding: 200px 80px 80px 100px;
-  column-gap: 70px;
+  padding: 200px 100px 80px 100px;
+  column-gap: 40px;
   grid-template-areas:
     "logo . . . ."
     "location  contact links more-links social-icons";
 
+		@media (min-width: 768px) and (max-width: 1024px) {
+  		grid-template-columns: 3fr 3fr 1fr 1fr 2fr;
+			column-gap: 20px;
+			padding: 200px 25px 80px 25px;
+		}
 
 	.footer-logo {
 		grid-area: logo;
@@ -637,7 +642,7 @@ footer {
 			font-size: 1rem;
 			font-family: var(--open-sans);
 			color: var(--white);
-			padding-left: 35px;
+			padding-left: 15px;
 		}
 	}
 
@@ -657,7 +662,7 @@ footer {
 		}
 	
 		img {
-			margin-right: 24px;
+			padding-right: 15px;
 		}
 	}
 
@@ -670,7 +675,7 @@ footer {
 			font-size: 1rem;
 			font-family: var(--open-sans);
 			color: var(--white);
-			margin-bottom: 15px;
+			padding-bottom: 12px;
 
 			&:hover {
 				color: var(--cyan-hover);
@@ -688,7 +693,7 @@ footer {
 			font-size: 1rem;
 			font-family: var(--open-sans);
 			color: var(--white);
-			margin-bottom: 15px;
+			padding-bottom: 12px;
 
 			&:hover {
 				color: var(--cyan-hover);
@@ -704,7 +709,7 @@ footer {
 
 		i {
 			color: var(--white);
-			font-size: 30px;
+			font-size: 25px;
 
 			&:hover {
 				color: var(--cyan-hover);
@@ -715,7 +720,7 @@ footer {
 }
 
 // responsive footer
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	footer {
     grid-template-columns: 1fr;
     padding: 280px 27px 42px 27px;
@@ -729,20 +734,10 @@ footer {
       "more-links"
       "social-icons";
 
-		.social-icons i {
-			font-size: 28px;
-		}
-		
-		.fa-facebook {
-			justify-self: end;
-		}
-
-		.fa-twitter {
-			justify-self: center;
-		}
-
-		.fa-intagram {
-			justify-self: start;
+		.social-icons  {
+			font-size: 25px;
+			display: flex;
+			justify-content: space-evenly;
 		}
   }
 }
