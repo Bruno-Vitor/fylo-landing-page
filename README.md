@@ -19,7 +19,7 @@ Este projeto foi desenvolvido através do desafio do site [Frontend Mentor](http
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Sass](https://sass-lang.com/)
 - [JavaScript](https://www.javascript.com/)
 
